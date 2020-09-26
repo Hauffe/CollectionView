@@ -9,9 +9,15 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+struct Item {
+    var title: String
+    var description: String
+}
+
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
 
     var itemSize: CGSize = CGSize(width: 0, height: 0)
+    var items: [Item] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +32,9 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             layout.minimumInteritemSpacing = 0
             layout.estimatedItemSize = itemSize
             itemSize = CGSize(width: width, height: height)
+        }
+        for index in 0...5 {
+            items.append(Item(title: "Item \(index)", description: "Description item \(index)"))
         }
     }
     
@@ -51,14 +60,14 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return items.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         if let c = cell as? CollectionViewCell{
-            c.label.text = "\(indexPath.row + 1)"
+            c.label.text = items[indexPath.row].title
         }
     
         return cell
