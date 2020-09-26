@@ -18,6 +18,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
     var itemSize: CGSize = CGSize(width: 0, height: 0)
     var items: [Item] = []
+    var currentItem: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,13 +47,15 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     // MARK: - Navigation
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentItem = items[indexPath.row]
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//         Get the new view controller using [segue destinationViewController].
-//         Pass the selected object to the new view controller.
+        if let viewController = segue.destination as? ViewController{
+            viewController.item = currentItem
+        }
     }
     
 
