@@ -16,6 +16,8 @@
 		FA018012251F7D8F002F6D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA018010251F7D8F002F6D96 /* LaunchScreen.storyboard */; };
 		FA01801D251F7D8F002F6D96 /* CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01801C251F7D8F002F6D96 /* CollectionViewTests.swift */; };
 		FA018028251F7D8F002F6D96 /* CollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA018027251F7D8F002F6D96 /* CollectionViewUITests.swift */; };
+		FA646430251F845600420F28 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64642F251F845600420F28 /* CollectionViewController.swift */; };
+		FA646435251F84D600420F28 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA646434251F84D600420F28 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		FA018023251F7D8F002F6D96 /* CollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA018027251F7D8F002F6D96 /* CollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewUITests.swift; sourceTree = "<group>"; };
 		FA018029251F7D8F002F6D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA64642F251F845600420F28 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		FA646434251F84D600420F28 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				FA018002251F7D8A002F6D96 /* AppDelegate.swift */,
 				FA018004251F7D8A002F6D96 /* SceneDelegate.swift */,
 				FA018006251F7D8A002F6D96 /* ViewController.swift */,
+				FA64642F251F845600420F28 /* CollectionViewController.swift */,
+				FA646434251F84D600420F28 /* CollectionViewCell.swift */,
 				FA018008251F7D8A002F6D96 /* Main.storyboard */,
 				FA01800E251F7D8F002F6D96 /* Assets.xcassets */,
 				FA018010251F7D8F002F6D96 /* LaunchScreen.storyboard */,
@@ -263,8 +269,10 @@
 			files = (
 				FA018007251F7D8A002F6D96 /* ViewController.swift in Sources */,
 				FA018003251F7D8A002F6D96 /* AppDelegate.swift in Sources */,
+				FA646435251F84D600420F28 /* CollectionViewCell.swift in Sources */,
 				FA01800D251F7D8A002F6D96 /* CollectionView.xcdatamodeld in Sources */,
 				FA018005251F7D8A002F6D96 /* SceneDelegate.swift in Sources */,
+				FA646430251F845600420F28 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
